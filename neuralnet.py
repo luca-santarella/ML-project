@@ -265,4 +265,3 @@ class NeuralNetMLP(object):
             self.eval_['valid_acc'].append(valid_acc)
 
         return self
-
