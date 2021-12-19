@@ -1,0 +1,38 @@
+1° RANDOMIZED SEARCH, iterations failed: 1378/5000, K=5
+params = {
+    "hidden_layer_sizes": [
+        (5,),
+        (10,),
+        (25,),
+        (50,),
+        (100,),
+        (5, 5),
+        (10, 10),
+        (25, 25),
+        (50, 50),
+        (100, 100),
+    ],
+    "activation" : ["logistic", "tanh", "relu"],
+    "solver": ["sgd", "adam"],
+    "learning_rate": ["constant", "adaptive", "invscaling"],
+    "learning_rate_init": uniform(0.01, 0.5),
+    "alpha": uniform(0.0001, 0.01),
+    "batch_size": randint(1, X.shape[0]),
+    "n_iter_no_change": [
+        10,
+        25,
+        50,
+    ],
+    "random_state": [69],
+    "tol": uniform(0.001,0.0001),
+    "early_stopping": [True, False],
+    "validation_fraction": [0.2],
+}
+
+BEST_MODEL: best_params = {'activation': 'logistic', 'alpha': 0.004090923428343316, 'batch_size': 166, 'early_stopping': False, 
+            'hidden_layer_sizes': (25, 25), 'learning_rate': 'adaptive', 'learning_rate_init': 0.06027127946828991, 
+            'n_iter_no_change': 10, 'random_state': 69, 'solver': 'sgd', 'tol': 0.001046608189976575, 'validation_fraction': 0.2}
+            
+            ACCURACY: 0.9655, MEE: 0.87 (internal_test_set seed=420)
+
+
